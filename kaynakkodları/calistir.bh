@@ -1,0 +1,28 @@
+#!/bin/bash
+
+script="scratch/deneme"
+nDevices=1411
+startPeriod=600
+periodIncrement=600
+maxPeriod=3600
+
+for appPeriodSeconds in $(seq $startPeriod $periodIncrement $maxPeriod); do
+    echo "Running simulations for period: $appPeriodSeconds"
+    folder="scratch/deneme/Test_${nDevices}/period_${appPeriodSeconds}/run"
+    mkdir -p $folder
+    for r in $(seq 1 30); do
+        echo "  Running deneme $r"
+        runFolder="${folder}${r}"
+        mkdir -p $runFolder
+
+        # Rastgele koordinatlar oluştur
+        randX=$(shuf -i 0-1000 -n 1)
+        randY=$(shuf -i 0-1000 -n 1)
+        randZ=$(shuf -i 0-1000 -n 1)
+
+        # Simülasyonu çalıştır
+        ./ns3 run "scratch/deneme --appPeriodSeconds=$appPeriodSeconds --GatewayX=$randX --GatewayY=$randY --GatewayZ=$randZ" > "$runFolder/log.txt" 2>&1
+    done
+done
+
+echo "All simulations completed."
