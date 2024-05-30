@@ -1,9 +1,0 @@
-Ortalama ranX: 478.73333333333335
-Ortalama ranY: 528.2666666666667
-Ortalama ranZ: 451.3
-Ortalama Gönderilen Paket: 1411.0
-Ortalama Ulaşan Paket: 1396.3
-Ortalama Kaybolan Paket: 14.7
-Ortalama Packet Delivery Rate: 98.95819666666668
-Ortalama Gecikme: 19102.1
-Ortalama Ortalama Gecikme: 13.233333333333333
