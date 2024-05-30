@@ -1,4 +1,4 @@
-# Bilgisayar Ağlari Dönem Projesi
+# Bilgisayar Ağları Dönem Projesi
 Proje kapsamında kablosuz haberleşme teknolojilerinden bir tanesi olan LoraWAN modülünün performansının hareketlilikten nasıl etkilendiği incelenmiştir. Performans metrikleri olarak PDR(packet delivery rate) ve gecikme değerleri belirlenmiş olup ölçümler bu metriklere göre yapılmıştır. 
 
 # Ana Özellikler 
